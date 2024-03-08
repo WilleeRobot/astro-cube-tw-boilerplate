@@ -16,4 +16,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [Andy Bell](https://piccalil.li/blog/a-css-project-boilerplate/) about CubeCSS with tailwind.
+Read more from Andy Bell's [A CSS project boilerplate](https://piccalil.li/blog/a-css-project-boilerplate/).
