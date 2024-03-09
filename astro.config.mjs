@@ -7,6 +7,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://rol4nd909.github.io',
   integrations: [icon(), tailwind({
-    applyBaseStyles: false
+    applyBaseStyles: false,
+    config: './tailwind.config.mjs',
+    nesting: true,
   })]
 });
