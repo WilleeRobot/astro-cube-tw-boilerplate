@@ -21,7 +21,10 @@
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^2.1.1",
+    "postcss": "^8.4.35",
     "postcss-custom-media": "^10.0.3",
+    "postcss-js": "^4.0.1",
+    "postcss-nesting": "^12.1.0",
     "postcss-preset-env": "^9.5.0",
     "postcss-utopia": "^1.0.1",
     "prettier": "^3.2.5",

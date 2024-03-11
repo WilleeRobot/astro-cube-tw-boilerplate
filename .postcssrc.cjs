@@ -1,6 +1,10 @@
-const postcssPresetEnv  = require('postcss-preset-env')
+const postcssPresetEnv = require('postcss-preset-env')
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssGlobalData = require('@csstools/postcss-global-data');
+const tailwindcss = require('tailwindcss');
+const tailwindcssNesting = require('tailwindcss/nesting');
+const postcssUtopia = require('postcss-utopia');
+const postcssNesting = require('postcss-nesting');
 
 
 module.exports = {
@@ -9,8 +13,8 @@ module.exports = {
       autoprefixer: false,
       stage: 2,
       features: {
-        'logical-properties-and-values': false, 
-        'prefers-color-scheme-query': false, 
+        'logical-properties-and-values': false,
+        'prefers-color-scheme-query': false,
         'gap-properties': false,
         'custom-properties': false,
         'is-pseudo-class': false,
@@ -22,7 +26,8 @@ module.exports = {
         'has-pseudo-class': false,
         'place-properties': false,
         'media-query-ranges': false,
-        'custom-media-queries': true
+        'custom-media-queries': true,
+        'nesting-rules': false,
       }
     }),
     postcssGlobalData({
@@ -31,9 +36,12 @@ module.exports = {
       ]
     }),
     postcssCustomMedia(),
-    require('postcss-utopia')({
-      minWidth: 400,
-      maxWidth: 1200,
-    }, 'tailwindcss/nesting', 'tailwindcss'),
+    // postcssNesting(),
+    tailwindcssNesting(postcssNesting),
+    tailwindcss(),
+    postcssUtopia({
+      minWidth: 400, // Default minimum viewport
+      maxWidth: 1200, // Default maximum viewport
+    })
   ]
 };
