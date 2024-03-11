@@ -23,6 +23,8 @@ const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const lineHeight = tokensToTailwind(textLeadingTokens.items);
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
 
+// Deafault tailwind config
+// https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/config.full.js
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   // Add color classes to safe list so they are always generated
