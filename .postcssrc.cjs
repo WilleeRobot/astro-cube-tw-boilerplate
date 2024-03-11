@@ -31,6 +31,9 @@ module.exports = {
       ]
     }),
     postcssCustomMedia(),
-    require('tailwindcss/nesting', 'tailwindcss'),
+    require('postcss-utopia')({
+      minWidth: 400,
+      maxWidth: 1200,
+    }, 'tailwindcss/nesting', 'tailwindcss'),
   ]
 };
