@@ -54,9 +54,8 @@ After running the development server, you can start building your project in the
 
 ## Contributing
 
-Contributions are welcome!
-
+Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) before making any changes. If you're planning to contribute, please create a new branch for your feature or bug fix and submit a pull request on GitHub. This will make it easier to review and merge your changes.
 
 ## Contact
 
-For further questions or support, please contact [hi@rolandfranke.nl](mailto:hi@rolandfranke.nl).
+For further questions or support, please contact [hi@rolandfranke.nl](mailto:hi@rolandfranke.nl). You can also reach out through GitHub by opening an issue or a discussion.
