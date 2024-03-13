@@ -20,11 +20,6 @@ First off, thank you for considering contributing to this project. It's people l
 7. **Create a pull request**. Describe your changes as much as possible in the pull request description.
 
 
-## Code of Conduct
-
-By participating in this project, you are expected to uphold our Code of Conduct.
-
-
 ## Need help?
 
 If you have any questions or need help, don't hesitate to ask. You can contact us at [hi@rolandfranke.nl](mailto:hi@rolandfranke.nl) or open an issue on GitHub.
