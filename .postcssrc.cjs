@@ -4,7 +4,6 @@ const postcssGlobalData = require('@csstools/postcss-global-data');
 const tailwindcss = require('tailwindcss');
 const tailwindcssNesting = require('tailwindcss/nesting');
 const postcssUtopia = require('postcss-utopia');
-const postcssNesting = require('postcss-nesting');
 
 
 module.exports = {
@@ -27,7 +26,6 @@ module.exports = {
         'place-properties': false,
         'media-query-ranges': false,
         'custom-media-queries': true,
-        'nesting-rules': false,
       }
     }),
     postcssGlobalData({
@@ -36,8 +34,7 @@ module.exports = {
       ]
     }),
     postcssCustomMedia(),
-    // postcssNesting(),
-    tailwindcssNesting(postcssNesting),
+    tailwindcssNesting(),
     tailwindcss(),
     postcssUtopia({
       minWidth: 400, // Default minimum viewport

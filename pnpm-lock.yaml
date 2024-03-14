@@ -37,9 +37,6 @@ devDependencies:
   postcss-js:
     specifier: ^4.0.1
     version: 4.0.1(postcss@8.4.35)
-  postcss-nesting:
-    specifier: ^12.1.0
-    version: 12.1.0(postcss@8.4.35)
   postcss-preset-env:
     specifier: ^9.5.0
     version: 9.5.0(postcss@8.4.35)
