@@ -1,3 +1,5 @@
+import { min, max } from './src/design-tokens/viewports.json';
+
 const postcssPresetEnv = require('postcss-preset-env')
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssGlobalData = require('@csstools/postcss-global-data');
@@ -37,8 +39,8 @@ module.exports = {
     tailwindcssNesting(),
     tailwindcss(),
     postcssUtopia({
-      minWidth: 400, // Default minimum viewport
-      maxWidth: 1200, // Default maximum viewport
+      minWidth: min, // Default minimum viewport
+      maxWidth: max, // Default maximum viewport
     })
   ]
 };
