@@ -13,7 +13,7 @@ export default defineConfig({
   scopedStyleStrategy: "where",
   integrations: [tailwind({
     applyBaseStyles: false,
-    config: './tailwind.config.mjs',
+    config: './tailwind.config.ts',
     nesting: true,
   }), icon()],
 });
