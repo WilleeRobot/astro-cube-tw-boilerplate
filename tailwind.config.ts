@@ -24,9 +24,6 @@ const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const lineHeight = tokensToTailwind(textLeadingTokens.items);
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
 
-console.log(fontSize);
-
-
 // Custom utility to slugify text
 const nameSlug = (text: string): string => slugify(text, { lower: true });
 
