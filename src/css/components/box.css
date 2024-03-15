@@ -4,7 +4,7 @@ More info: https://every-layout.dev/layouts/box/#the-generator
 */
 
 .box {
-  @apply text-dark bg-light;
+  @apply bg-light text-dark;
   padding: var(--space-s-m);
 
   * {
