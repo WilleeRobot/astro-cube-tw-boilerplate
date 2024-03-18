@@ -2,8 +2,8 @@ import slugify from 'slugify'
 
 export type Token = {
   name: string
-  value: any
-  lineHeight?: any
+  value: number | string | string[]
+  lineHeight?: number
 }
 
 /**
