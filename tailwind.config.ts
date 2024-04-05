@@ -47,11 +47,9 @@ const tailwindConfig: Config = {
     textColor: ({ theme }) => theme('colors'),
     margin: ({ theme }) => ({
       auto: 'auto',
-      '0': '0',
       ...theme('spacing'),
     }),
     padding: ({ theme }) => ({
-      '0': '0',
       ...theme('spacing'),
     }),
   },
@@ -80,9 +78,11 @@ const tailwindConfig: Config = {
     borderOpacity: false,
   },
   blocklist: ['container'],
+  // Remove empty custom properties
   experimental: {
     optimizeUniversalDefaults: true,
   },
+  // Add custom properties from the design-tokens to the root element
   plugins: [
     plugin(function ({ addComponents, config }) {
       let result = ''
