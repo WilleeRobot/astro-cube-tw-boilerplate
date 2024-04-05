@@ -79,9 +79,9 @@ const tailwindConfig: Config = {
   },
   blocklist: ['container'],
   // Remove empty custom properties
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
+  // experimental: {
+  //   optimizeUniversalDefaults: true,
+  // },
   // Add custom properties from the design-tokens to the root element
   plugins: [
     plugin(function ({ addComponents, config }) {
