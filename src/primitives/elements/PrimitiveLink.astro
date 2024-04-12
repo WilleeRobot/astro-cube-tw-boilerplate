@@ -1,0 +1,25 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+export type Props = HTMLAttributes<'a'> & {
+    href: string
+    newTab?: boolean
+}
+
+const {href, newTab, ...rest } = Astro.props
+---
+
+{
+    href ? (
+        <a
+            href={href}
+            target={newTab ? '_blank' : undefined}
+            rel={newTab ? 'noreferrer' : undefined}
+            {...rest}
+        >
+            <slot />
+        </a>
+    ) : (
+        <slot />
+    )
+}

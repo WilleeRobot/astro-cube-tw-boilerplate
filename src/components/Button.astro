@@ -1,73 +1,14 @@
-<!-- ---
-import type { HTMLTag, Polymorphic } from 'astro/types'
+---
+import type { Props as PrimitiveButtonProps } from "@/primitives/elements/PrimitiveButton.astro";
+import PrimitiveButton from "@/primitives/elements/PrimitiveButton.astro";
 
-// interface Props extends HTMLAttributes<keyof typeof linkOptions> {
-//     type: keyof typeof linkOptions;
-//     color?: 'primary' | 'secondary' | 'tertiary';
-//     size?: 'sm' | 'lg';
-//     iconOnly?: boolean;
-//     isOutlined?: boolean;
-//     isRounded?: boolean;
-//     classes?: string;
-//     href?: string;
-// }
+type Props = PrimitiveButtonProps & {
+		className?: string;
+	};
 
-type Props<T extends HTMLTag = HTMLTag> = Polymorphic<{
-    as: T
-    color?: 'primary' | 'secondary' | 'tertiary'
-    size?: 'sm' | 'lg'
-    iconOnly?: boolean
-    isOutlined?: boolean
-    isRounded?: boolean
-    classes?: string
-    href?: string
-}>
-
-const { as, size, iconOnly, isOutlined, isRounded, classes, href, ...rest } = Astro.props
-const Tag = as
+const { className, children, hasIcon, href, ...rest } = Astro.props;
 ---
 
-<Tag class:list={['btn', classes]} {...rest}>
-    <slot />
-</Tag>
-
-<style>
-    .btn {
-        font: inherit;
-        cursor: pointer;
-
-        display: inline-flex;
-
-        padding-block: 0.5em;
-        padding-inline: 1em;
-
-        font-size: 1rem;
-
-        border-radius: var(--_radius, 0);
-        border-width: max(1px, 0.05em);
-        border-color: var(--_border-color, transparent);
-
-        background-color: var(--_bg-color, transparent);
-
-        &[data-size='sm'] {
-            font-size: 0.75rem;
-        }
-
-        &[data-size='lg'] {
-            font-size: 1.25rem;
-        }
-    }
-</style>
-
-<style>
-    .modern-gradient {
-        background-image: conic-gradient(
-            from 0deg at 50% 50% in oklab,
-            #ff7124 0%,
-            #dbbba7 25%,
-            #fff 50%,
-            #dbbba7 75%,
-            #ff7124 100% 0%
-        );
-    }
-</style> -->
+<PrimitiveButton href={href} class:list={['btn', className]} type={href ? undefined : "button"} {...rest}>
+	<slot />
+</PrimitiveButton>

@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import type { Props as LinkProps } from "./PrimitiveLink.astro";
+import PrimitiveLink from "./PrimitiveLink.astro";
+
+export type Props = HTMLAttributes<'button'> & Omit<LinkProps, 'href'> & {
+	href?: LinkProps['href'] // make optional
+};
+
+const { ...rest } = Astro.props
+---
+
+{rest.href ? (
+	<PrimitiveLink href={rest.href} {...rest}>
+		<slot />
+	</PrimitiveLink>
+) : (
+	<button {...rest}>
+		<slot />
+	</button>
+)}

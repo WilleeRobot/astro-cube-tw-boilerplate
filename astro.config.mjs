@@ -5,10 +5,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://rol4nd909.github.io',
+  // Set your site URL
+  // site: 'https://site.url',
   
   // update the `base` to your needs
-  base: '/astro-cube-tw-boilerplate/',
+  // base: '',
   
   scopedStyleStrategy: "where",
   integrations: [tailwind({
