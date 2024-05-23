@@ -6,7 +6,7 @@ type Props = PrimitiveButtonProps & {
 		className?: string;
 	};
 
-const { className, children, hasIcon, href, ...rest } = Astro.props;
+const { className, children, href, ...rest } = Astro.props;
 ---
 
 <PrimitiveButton href={href} class:list={['btn', className]} type={href ? undefined : "button"} {...rest}>
